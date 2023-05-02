@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "YGCJEpq57Q9e3XOxSTQn2tDrrZnqZGvWlH3g2qIXCTiEI5PFB8bAEp3sDTDHYBf5H0UNPGiVXkom4peo2z4RyQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\igosh\\source\\repos\\Message_Sender\\Message_Sender.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\igosh\\.nuget\\packages\\materialdesigncolors\\2.1.2\\materialdesigncolors.2.1.2.nupkg.sha512",
+    "C:\\Users\\igosh\\.nuget\\packages\\materialdesignthemes\\4.8.0\\materialdesignthemes.4.8.0.nupkg.sha512",
+    "C:\\Users\\igosh\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

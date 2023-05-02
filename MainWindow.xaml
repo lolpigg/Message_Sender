@@ -1,0 +1,24 @@
+﻿<Window x:Class="Message_Sender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:Message_Sender"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="IP" materialDesign:HintAssist.Hint="Введите IP, к которому хотите подключится" VerticalContentAlignment="Bottom" Margin="0,0,5,5"></TextBox>
+        <TextBox x:Name="Name" Grid.Column="1" materialDesign:HintAssist.Hint="Введите свой ник" VerticalContentAlignment="Bottom" Margin="5,0,0,5"></TextBox>
+        <Button x:Name="Create" Grid.Row="1" Height="NaN" Content="Создать чат" Click="Create_Click" Margin="0,5,5,5"></Button>
+        <Button x:Name="Join" Grid.Row="1" Grid.Column="1" Height="NaN" Content="Войти в чат" Click="Join_Click" Margin="5,5,0,5"></Button>
+    </Grid>
+</Window>

@@ -1,0 +1,31 @@
+﻿<Window x:Class="Message_Sender.DialogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Message_Sender"
+        Closing="ClosingWindow"
+        mc:Ignorable="d"
+        Title="DialogWindow" Height="450" Width="800">
+    <Grid Margin="5,5,5,5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="6*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button x:Name="Users" Content="Пользователи" Height="NaN" Margin="0,0,5,5" Click="Users_Click"></Button>
+        <Button x:Name="Logs" Content="Логи" Grid.Column="1" Height="NaN" Grid.ColumnSpan="3" Margin="5,0,0,5" Click="Logs_Click"></Button>
+        <ListBox x:Name="ListBoxer" Grid.Row="1" Grid.RowSpan="2" Margin="0,0,5,0"></ListBox>
+        <Button x:Name="Exit" Content="Выйти" Grid.Column="1" Grid.Row="2" Height="NaN" Margin="5,5,5,0" FontSize="12" Click="Exit_Click"></Button>
+        <TextBox x:Name="Message" materialDesign:HintAssist.Hint="Введите сообщение" Grid.Row="2" Grid.Column="2"></TextBox>
+        <Button x:Name="Send" Content="Отправить" Grid.Column="3" Grid.Row="2" Height="NaN" Margin="5,5,5,0" Cursor="" FontSize="12" Click="Send_Click"/>
+        <ListBox x:Name="MessageListBox" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Background="White" Foreground="#DD000000"></ListBox>
+    </Grid>
+</Window>
