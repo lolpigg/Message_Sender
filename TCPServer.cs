@@ -49,6 +49,11 @@ namespace Message_Sender
                     dialogWindow.LogsList.Add($"{DateTime.Now} - {message.Split(' ')[1]} присоединился к чату.");
                     
                 }
+                else if (message.Split(' ')[0] == "/disconnect")
+                {
+                    dialogWindow.Names.Remove(message.Split(' ')[1]);
+                    dialogWindow.LogsList.Add($"{DateTime.Now} - {message.Split(' ')[1]} покинул чат.");
+                }
                 else
                 {
                     dialogWindow.AddMessage($"{DateTime.Now}, Сообщение от:[{message.Split('/')[1]}] {message.Split('/')[0]}");
