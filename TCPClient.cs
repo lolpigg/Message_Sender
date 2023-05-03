@@ -13,14 +13,14 @@ namespace Message_Sender
     class TCPClient
     {
         private static Socket server;
-        private static CancellationTokenSource SofiaAlekseevnaTheBest;
+        public static CancellationTokenSource SofiaAlekseevnaTheBest;
         public static List<Socket> clients = new List<Socket>();
         private static DialogWindow dialogWindow;
         public static void Launch(DialogWindow dialogWindow1, string IP, string name)
         {
             SofiaAlekseevnaTheBest = new CancellationTokenSource();
             server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            server.ConnectAsync(IP, 8888);
+            server.Connect(IP, 8888);
             RecieveMessage();
             dialogWindow = dialogWindow1;
             SendMessage($"/name {name}", "");
@@ -43,17 +43,17 @@ namespace Message_Sender
                     dialogWindow.ListBoxer.ItemsSource = null;
                     dialogWindow.ListBoxer.ItemsSource = dialogWindow.Names;
                 }
-                else if (message == "/disconnect")
+                else if (message.Split('/')[1] == "disconnect")
                 {
                     MessageBox.Show("Чат завершен.");
+                    dialogWindow.Close();
                     return;
                 }
                 else
                 {
-
+                    dialogWindow.AddMessage($"{DateTime.Now}, Сообщение от:[{message.Split('/')[1]}] {message.Split('/')[0]}");
                 }
                 
-                dialogWindow.AddMessage($"{DateTime.Now}, Сообщение от:[{message.Split('/')[1]}] {message.Split('/')[0]}");
             }
         }
         public static async Task SendMessage(string message, string name)

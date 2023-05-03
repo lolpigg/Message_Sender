@@ -64,6 +64,7 @@ namespace Message_Sender
             else
             {
                 TCPClient.SendMessage($"/disconnect {ClientName}", "");
+                
             }
             Thread.Sleep(500);
             MainWindow window = new MainWindow();

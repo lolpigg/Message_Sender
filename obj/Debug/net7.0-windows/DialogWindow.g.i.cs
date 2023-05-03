@@ -112,7 +112,7 @@ namespace Message_Sender {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Message_Sender;component/dialogwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Message_Sender;V1.0.0.0;component/dialogwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\DialogWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
