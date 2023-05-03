@@ -58,13 +58,11 @@ namespace Message_Sender
         {
             if (IsServer)
             {
-                TCPServer.Send("/disconnect");
                 TCPServer.SofiaAlekseevnaTheBest.Cancel();
             }
             else
             {
-                TCPClient.SendMessage($"/disconnect {ClientName}", "");
-                
+                TCPClient.SofiaAlekseevnaTheBest.Cancel();
             }
             Thread.Sleep(500);
             MainWindow window = new MainWindow();
@@ -77,7 +75,6 @@ namespace Message_Sender
             {
                 if (Message.Text == "/disconnect")
                 {
-                    TCPServer.Send("/disconnect");
                     TCPServer.SofiaAlekseevnaTheBest.Cancel();
                     Thread.Sleep(500);
                     MainWindow window = new MainWindow();
@@ -94,8 +91,6 @@ namespace Message_Sender
             {
                 if (Message.Text == "/disconnect")
                 {
-
-                    TCPClient.SendMessage($"/disconnect {ClientName}", "");
                     Thread.Sleep(500);
                     MainWindow window = new MainWindow();
                     window.Show();
@@ -126,12 +121,11 @@ namespace Message_Sender
         {
             if (IsServer)
             {
-                TCPServer.Send("/disconnect");
                 TCPServer.SofiaAlekseevnaTheBest.Cancel(); //:(
             }
             else
             {
-                TCPClient.SendMessage($"/disconnect {ClientName}", "");
+                TCPClient.SofiaAlekseevnaTheBest.Cancel();
             }
             Thread.Sleep(500);
             MainWindow window = new MainWindow();
